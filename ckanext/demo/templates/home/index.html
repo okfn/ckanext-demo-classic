@@ -5,7 +5,7 @@
   >
 
   <py:def function="body_class">no-sidebar</py:def>
- 
+
   <py:def function="page_title">Welcome</py:def>
 
   <div py:match="//div[@id='content']" class="front-page">
@@ -14,29 +14,25 @@
     </div>
     <div class="row">
       <div class="span12">
-        <p>Welcome to the CKAN demo. Here you can try out standard CKAN functionality in a sandbox environment. 
+        <p>Welcome to the CKAN demo. Here you can try out standard CKAN functionality in a sandbox environment.
         Search for datasets directly from the homepage or by navigating to the <a href="dataset">search page</a>
         where you can facet by tags, groups and format.</p>
 
-        <p>You can also <a href="dataset/new">add a dataset</a> to get a sense of publisher workflow. This form 
-        can be customised to require many additional fields. In this demo only the most basic are required 
-        and additional information such as maintainer and extra fields can be added by going to ‘Settings’ 
+        <p>You can also <a href="dataset/new">add a dataset</a> to get a sense of publisher workflow. This form
+        can be customised to require many additional fields. In this demo only the most basic are required
+        and additional information such as maintainer and extra fields can be added by going to ‘Settings’
         once a dataset has been created.</p>
 
-        <p>CKAN metadata forms support geospatial metadata (e.g. see ‘geographic extent’ at the bottom of 
-        <a href="http://demo.ckan.org/dataset/newcastle-city-council-payments-over-500">
-          http://demo.ckan.org/dataset/newcastle-city-council-payments-over-500
-        </a>),
-        choosing types from a taxonomy and a variety of tagging. Added resources (data files) get validated by 
+        <p>CKAN metadata forms support geospatial metadata (e.g. see ‘geographic extent’ at the bottom of
+        <a href="http://demo.ckan.org/dataset/newcastle-city-council-payments-over-500">this dataset</a>),
+        choosing types from a taxonomy and a variety of tagging. Added resources (data files) get validated by
         our QA extension to prefill size and format (if enabled).</p>
 
-        <p>To see our data explorer in action, have a look at the resource pages of any datasets in this 
-        group: <a href="http://demo.ckan.org/en/group/data-explorer">http://demo.ckan.org/en/group/data-explorer</a></p>
-
-        <p>For an example of our map explorer, please click on the ‘Map’ button under ‘Preview’ of the 
+        <p>To see our data explorer in action, have a look at the resource pages of any datasets in
+        <a href="http://demo.ckan.org/en/group/data-explorer">this group</a>.
+        For an example of our map explorer, please click on the ‘Map’ button under ‘Preview’ of the
         <a href="http://demo.ckan.org/dataset/malawi-aid-projects/resource/b717c20e-2006-4ad4-82d2-59b57ebc1ab0">
-          Malawi Aid Project resource page. 
-        </a>.
+          Malawi Aid Project resource page</a>.
         We also <a href="http://demo.ckan.org/en/dataset/afterfibre/resource/5d19f9fa-c5a4-426c-84de-c624d6e8c3b3">preview HTML</a>.</p>
       </div>
     </div>
@@ -46,11 +42,11 @@
           <div class="action-box-inner find">
             <h1>Find data</h1>
 
-            <form action="${h.url_for(controller='package', action='search')}" method="GET"> 
-              <input name="q" value="" class="search-field" placeholder="${_('Find datasets')}" /> 
-            </form> 
-            ${g.site_title} contains <a href="${h.url_for(controller='package', action='search')}">${c.package_count} datasets</a> that you can 
-            browse, learn about and download. 
+            <form action="${h.url_for(controller='package', action='search')}" method="GET">
+              <input name="q" value="" class="search-field" placeholder="${_('Find datasets')}" />
+            </form>
+            ${g.site_title} contains <a href="${h.url_for(controller='package', action='search')}">${c.package_count} datasets</a> that you can
+            browse, learn about and download.
           </div>
         </div>
       </div>
@@ -61,7 +57,7 @@
 
         Add your own datasets to share them with others and
         to find other people interested in your data.
-          
+
           <py:choose test="h.check_access('package_create')">
             <a py:when="" href="${h.url_for(controller='package', action='new')}" class="create-button">Create a dataset &raquo;</a>
             <py:otherwise>
@@ -76,8 +72,8 @@
           <div class="action-box-inner collaborate">
           <h1>Collaborate</h1>
 
-        Find out more about working with open data by exploring 
-        these resources: 
+        Find out more about working with open data by exploring
+        these resources:
           <ul>
             <li><a href="http://getthedata.org">GetTheData.org</a></li>
             <li><a href="http://datapatterns.org">DataPatterns.org</a></li>
