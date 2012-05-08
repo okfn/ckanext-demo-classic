@@ -12,10 +12,6 @@
   about=""
   py:strip="">
 
-  <py:def function="optional_head">
-    <link rel="stylesheet" href="${h.url_for_static('/css/demo.css')}" />
-  </py:def>
-
   <py:def function="page_title">${c.pkg_dict.get('title', c.pkg_dict['name'])}
   - Datasets</py:def>
 
@@ -111,6 +107,7 @@
       <link rel="alternate" type="application/rdf+xml" title="RDF/XML" href="${config['rdf_packages'] + '/' + c.pkg.id + '.rdf' }" />
       <link rel="alternate" type="application/turtle" title="RDF/Turtle" href="${config['rdf_packages'] + '/' + c.pkg.id + '.ttl' }" />
     </py:if>
+    <link rel="stylesheet" href="${h.url_for_static('/css/demo.css')}" />
   </py:def>
 
   <py:def function="optional_feed">
